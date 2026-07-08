@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Gabi ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+:root{
+
+    --violeta1:#2d1b3d;
+    --violeta2:#41264f;
+    --violeta3:#6c4f83;
+
+    --glass:rgba(255,255,255,.12);
+    --glass-border:rgba(255,255,255,.18);
+
+    --texto:#ffffff;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Segoe UI',sans-serif;
+
+    color:var(--texto);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        var(--violeta1),
+        var(--violeta2),
+        var(--violeta3)
+    );
+
+    background-size:400% 400%;
+
+    animation:fondo 15s ease infinite;
+
+    position:relative;
+
+}
+
+/* ========================= */
+/* FONDO ANIMADO */
+/* ========================= */
+
+@keyframes fondo{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ========================= */
+/* PARTICULAS */
+/* ========================= */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ========================= */
+/* CORAZONES */
+/* ========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:20px;
+
+    animation:floatHeart linear forwards;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+.seccion{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+    position:relative;
+
+    z-index:2;
+
+    animation:fade .7s ease;
+
+}
+
+.seccion.activa{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================= */
+/* INICIO */
+/* ========================= */
+
+#inicio{
+
+    
+
+    background:
+    url("Nueva carpeta/IMG-20260408-WA0077.jpg")
+    center center/cover;
+
+}
+
+#inicio::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(3px);
+
+}
+
+.contenido-inicio{
+
+    position:relative;
+
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:3.5rem;
+
+    text-shadow:0 0 25px rgba(255,255,255,.25);
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    margin-bottom:20px;
+
+}
+
+/* ========================= */
+/* AUDIO */
+/* ========================= */
+
+audio{
+
+    width:min(350px,95%);
+
+    margin-top:20px;
+
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+
+.contenedor{
+
+    margin-top:60px;
+
+    display:flex;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.bloque{
+
+    width:250px;
+
+    height:170px;
+
+    border-radius:30px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.bloque:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    background:
+    rgba(255,255,255,.2);
+
+}
+
+/* ========================= */
+/* CARTAS */
+/* ========================= */
+
+.carta{
+
+    width:min(1000px,95%);
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    line-height:2;
+
+    font-size:18px;
+
+    text-align:justify;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+
+}
+
+.carta p{
+
+    margin-bottom:22px;
+
+}
+
+/* ========================= */
+/* BOTON VOLVER */
+/* ========================= */
+
+.volver{
+
+    display:block;
+
+    margin:40px auto;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#5a3473;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.volver:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ========================= */
+/* SLIDER */
+/* ========================= */
+
+.slider{
+
+    position:relative;
+
+    width:min(950px,95%);
+
+    margin:40px auto;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.4);
+
+}
+
+.slides{
+
+    display:flex;
+
+    transition:transform .5s ease;
+
+}
+
+.slides img{
+
+    width:100%;
+
+    flex-shrink:0;
+
+    height:550px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.5);
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+.prev{
+
+    left:15px;
+
+}
+
+.next{
+
+    right:15px;
+
+}
+
+.dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.4);
+
+    cursor:pointer;
+
+}
+
+.dot.active{
+
+    background:white;
+
+}
+
+/* ========================= */
+/* LIGHTBOX */
+/* ========================= */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox img{
+
+    max-width:95%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+}
+
+.lightbox.activo{
+
+    display:flex;
+
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+.video{
+
+    width:min(1000px,95%);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+/* ========================= */
+/* CANCIONES */
+/* ========================= */
+
+.cancion{
+
+    width:min(450px,90%);
+
+    margin:20px auto;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cancion:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .seccion{
+
+        padding:20px 15px;
+
+    }
+
+    .contenedor{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .bloque{
+
+        width:100%;
+        max-width:340px;
+
+        height:100px;
+
+        font-size:40px;
+
+    }
+
+    .slides img{
+
+        height:380px;
+
+    }
+
+    .carta{
+
+        padding:22px;
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .volver{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+
+<canvas id="particles"></canvas>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+
+    <img id="lightboxImg" src="">
+
+</div>
+
+<!-- ========================= -->
+<!-- INICIO -->
+<!-- ========================= -->
+
+<section id="inicio" class="seccion activa">
+
+    <div class="contenido-inicio">
+
+        <h1>❤️ Para Gabi ❤️</h1>
+
+        <p style="
+            max-width:700px;
+            line-height:1.8;
+            margin-bottom:25px;
+            font-size:18px;
+        ">
+
+            Un pequeño lugar donde guardé un pedacito
+            de todo lo que siento por vos.
+
+        </p>
+
+        <audio
+            id="musica"
+            controls
+            autoplay
+            loop>
+
+            <source
+            src="Nueva carpeta/Coldplay - Sparks (1 Hour Loop).mp3"
+            type="audio/mpeg">
+
+        </audio>
+
+        <div 
+        class="bloque" 
+        onclick="mostrar('ella')">
+
+            ❤️
+
+        </div>
+
+
+            <div
+            class="bloque"
+            onclick="mostrar('recuerdos')">
+
+                🌸
+
+            </div>
+
+            <div
+            class="bloque"
+            onclick="mostrar('video')">
+
+                🎥
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================= -->
+<!-- SECCION ELLA -->
+<!-- ================================= -->
+
+<section
+id="ella"
+class="seccion">
+
+<h1
+style="
+text-align:center;
+margin-bottom:20px;
+">
+
+❤️
+
+</h1>
+
+<!-- ========================= -->
+<!-- CARRUSEL -->
+<!-- ========================= -->
+
+<div
+class="slider"
+id="sliderElla">
+
+<button
+class="prev">
+
+&#10094;
+
+</button>
+
+<div class="slides">
+
+<img
+src="Nueva carpeta/WhatsApp Image 2026-06-16 at 23.48.46 (1).jpeg"
+alt="">
+
+<img
+src="Nueva carpeta/WhatsApp Image 2026-06-16 at 23.48.46.jpeg"
+alt="">
+
+</div>
+
+<button
+class="next">
+
+&#10095;
+
+</button>
+
+</div>
+
+<div class="dots"></div>
+
+<!-- ========================= -->
+<!-- CARTA -->
+<!-- ========================= -->
+
+<div class="carta">
+<p>
+
+Okey, la verdad amor, no me quería quedar corto. Esto es algo que ya tenía pensado hacer hace bastante tiempo. Llevo varios días preparándolo y, aunque quizá no me llevó meses, sí fue complicado porque entre estudiar y que esta computadora a veces decide no colaborar, tuve que hacerlo de a poco.
+
+Aun así siento que esta página sigue siendo muy pequeña comparada con todo lo que quisiera decirte. Perdón si no puedo darte algo más grande o más impresionante; ojalá pudiera darte muchísimo más, porque realmente te lo merecés.
+
+</p>
+
+<p>
+
+Bueno... en realidad esta página también funciona como una carta, porque acá puedo expresarme mucho mejor.
+
+Todavía faltaba para tu cumpleaños cuando empecé a escribir todo esto, pero preferí hacerlo con tiempo porque no quería arriesgarme a que algo saliera mal y terminar sin poder darte nada.
+
+Amor... ya cumpliste 19 años.
+
+¡Diecinueve!
+
+Ya estás rozando las dos décadas y la verdad me pone muy feliz poder acompañarte en una etapa tan linda de tu vida.
+
+Gracias por haberme elegido entre todas las personas que existen.
+
+Sé que muchas veces no soy perfecto, que cometo errores y que todavía tengo muchísimo por mejorar, pero nunca dudes que todo lo que hago nace del amor enorme que siento por vos.
+
+Te amo con el corazón.
+
+Te amo con el alma.
+
+Y siento que ninguna palabra alcanza para describir todo lo que significás para mí.
+
+</p>
+
+<p>
+
+Gracias por hacerme tan feliz todos los días.
+
+Gracias por existir.
+
+Gracias por aparecer en mi vida.
+
+No sabés cuánto pienso en vos, cuánto te extraño cuando no estás y cuánto deseo seguir compartiendo momentos a tu lado.
+
+La verdad... espero que algún día podamos cumplir todos esos sueños que imaginamos juntos.
+
+Sí, ya sé...
+
+Somos jóvenes.
+
+Pero sinceramente no me importa.
+
+Quiero vivir mi juventud con vos.
+
+Quiero vivir mi adultez con vos.
+
+Y si existiera otra vida después de esta... también quisiera encontrarte ahí.
+
+No pienso perderte.
+
+No quiero dejarte nunca.
+
+Puede sonar exagerado, pero te tengo tanto amor y tanto cariño que siento que ni siquiera la muerte podría separar lo que siento por vos.
+
+Te necesito hoy.
+
+Te voy a necesitar mañana.
+
+Y también dentro de muchos años.
+
+Porque sos una parte muy importante de mi vida.
+
+</p>
+
+<p>
+
+Perdón si muchas veces siento que no logro demostrarte todo esto como realmente quisiera.
+
+Perdón si alguna vez una foto salió mal, un regalo fue sencillo o alguna palabra quedó corta.
+
+Siempre intento dar lo mejor de mí.
+
+Y aunque muchas veces pienso que podría hacer mucho más, quiero que sepas que cada detalle que preparo para vos está hecho con muchísimo amor.
+
+</p>
+<p>
+
+Cuando te conocí estaba pasando por una etapa bastante rara de mi vida. Había muchas cosas en mi cabeza y, sinceramente, no esperaba encontrar a alguien que me hiciera sentir todo lo que empecé a sentir por vos.
+
+La primera vez que te vi fue un boom para mí.
+
+Me pareciste hermosa.
+
+Pero al mismo tiempo me daba muchísima vergüenza hablarte.
+
+Pensaba que nunca podría gustarte y que seguramente ni siquiera ibas a fijarte en alguien como yo.
+
+Al final reuní un poquito de valor y te hablé.
+
+Todavía me acuerdo del día de la encuesta.
+
+Estaba tan nervioso que casi no sabía qué decir.
+
+Después, unos días más tarde, fui a llevarte plata... JAJAJAJA, qué vergüenza me da acordarme de eso.
+
+Y cuando llegó tu cumpleaños...
+
+Dios mío...
+
+A mí me llamaban para irme, pero yo no quería irme.
+
+Yo quería quedarme con vos.
+
+Quería decirte todo lo que sentía.
+
+Quería confesarte que me gustabas muchísimo.
+
+Al final no pude decir casi nada.
+
+Pero siento que ese beso habló por mí.
+
+Aunque no supiera besar.
+
+</p>
+
+<p>
+
+La verdad es que antes nunca hacía el esfuerzo de hablarle primero a alguien.
+
+Siempre esperaba que me hablaran.
+
+Con vos fue completamente distinto.
+
+Quería sacar conversación.
+
+Quería conocerte.
+
+Quería pasar tiempo con vos.
+
+Por primera vez dejé de ser "princeso", como siempre decimos.
+
+Y fue porque realmente quería demostrarte que me importabas.
+
+También empecé a ser mucho más detallista.
+
+No porque me naciera hacerlo con cualquiera.
+
+Sino porque con vos todo salía de forma natural.
+
+Cuando se acercaba tu cumpleaños yo no tenía idea de qué regalarte.
+
+Pensé muchísimo.
+
+Hasta que Vivi me contó que siempre querías hacerte las uñas y que conocía a alguien.
+
+Ahí fue cuando decidí regalarte eso.
+
+Quizá fue algo sencillo.
+
+Pero en ese momento todavía nos estábamos conociendo.
+
+Y lo único que quería era que vieras que realmente estaba interesado en vos.
+
+Que mis intenciones eran sinceras.
+
+Y que quería hacerte feliz.
+
+</p>
+
+<p>
+
+Con el tiempo fui descubriendo que hacer cosas por vos nunca me daba pereza.
+
+Al contrario.
+
+Me hacía ilusión.
+
+Buscar regalos.
+
+Pensar detalles.
+
+Escribirte.
+
+Prepararte sorpresas.
+
+Todo eso se volvió una forma de demostrarte cuánto te amo.
+</p>
+Y aunque muchas veces siento que todavía hago muy poco para todo lo que merecés, quiero que sepas que cada cosa que preparo para vos nace desde el corazón.
+<p>
+
+Después llegó ese día en el que me dijiste que tenías que hablar conmigo.
+
+Desde ese momento empecé a sobrepensar absolutamente todo.
+
+Y, lamentablemente, muchos de esos pensamientos terminaron haciéndose realidad.
+
+Cuando te acompañaba al Garden me sentía muy triste.
+
+Mientras caminábamos solamente pensaba que tal vez sería la última vez que iba a poder caminar a tu lado.
+
+La última vez que iba a poder verte sonreír tan cerca.
+
+La última vez que iba a poder abrazarte.
+
+Por eso quise darte un último beso.
+
+Quería que, pasara lo que pasara, supieras que seguía sintiendo exactamente lo mismo por vos.
+
+Aunque por fuera pareciera tranquilo, por dentro estaba completamente destruido.
+
+Porque desde hacía mucho tiempo yo deseaba que fueras vos.
+
+Y lo sigo deseando.
+
+Perdón si muchas veces te fallé.
+
+Perdón si alguna vez no te hice sentir segura.
+
+Perdón si no siempre fui suficiente.
+
+Nunca fue falta de amor.
+
+Al contrario.
+
+Fue porque todavía tengo mucho que aprender para convertirme en la persona que realmente merecés.
+
+</p>
+
+<p>
+
+El día que volvimos a hablar sentí un alivio enorme.
+
+Volverte a ver fue como volver a respirar después de haber estado mucho tiempo conteniendo el aire.
+
+No sabía cuánto necesitaba volver a tenerte cerca hasta que ese momento llegó.
+
+Gracias por darme otra oportunidad.
+
+Gracias por seguir apostando por nosotros.
+
+Gracias por no rendirte.
+
+</p>
+
+<p>
+
+Gracias por amarme sin pedir nada a cambio.
+
+Gracias por quererme incluso cuando yo mismo siento que no lo merezco.
+
+Gracias por hacerme sentir querido.
+
+Gracias por dejarme ser tu niño.
+
+Gracias por cada abrazo.
+
+Por cada caricia.
+
+Por cada mirada.
+
+Por cada sonrisa.
+
+Y gracias por hacerme sentir que, por primera vez en mucho tiempo, tengo un lugar donde realmente pertenezco.
+
+</p>
+
+<p>
+
+Hubo días en los que me di cuenta de todos mis errores.
+
+Días donde entendí cuánto daño pude haberte hecho sin querer.
+
+Y fueron días muy difíciles.
+
+Porque me dolía pensar que la persona que más amo pudiera sentirse mal por mi culpa.
+
+No quiero justificarme.
+
+Solo quiero mejorar.
+
+Quiero aprender.
+
+Quiero crecer.
+
+Quiero convertirme en alguien de quien siempre puedas sentirte orgullosa.
+
+Voy a seguir intentándolo todas las veces que haga falta.
+
+Porque sos la persona con la que quiero compartir mi vida.
+
+Y nunca voy a dejar de luchar por nosotros.
+
+</p>
+
+<p>
+
+Y bueno...
+
+Ya cumpliste 19 años.
+
+Diecinueve años tiene mi novia.
+
+Toda una señorita.
+
+Ya estás cada vez más cerca de los veinte.
+
+Quiero desearte un muy feliz cumpleaños, mi amor.
+
+Gracias por existir.
+
+Gracias por haber llegado a este mundo.
+
+Gracias por convertirte en la persona más importante de mi vida.
+
+Te necesito tanto como necesito respirar.
+
+Sos mi tranquilidad.
+
+Mi lugar seguro.
+
+Mi esperanza.
+
+Mi felicidad.
+
+Espero que todos tus sueños se cumplan.
+
+Que nunca dejes de sonreír.
+
+Que siempre estés orgullosa de la increíble persona que sos.
+
+Y acordate siempre de algo...
+
+Hay alguien que te ama muchísimo.
+
+Que piensa en vos todos los días.
+
+Que está orgulloso de vos.
+
+Que quiere verte feliz.
+
+Y que nunca va a dejar de hacer todo lo posible para cuidarte.
+
+Te amo con todo mi corazón.
+
+❤️
+
+</p>
+
+</div> <!-- cierre de carta -->
+
+<button class="volver" onclick="mostrar('inicio')">
+    🏠 Volver al inicio
+</button>
+
+</section> 
+
+
+
+<section id="recuerdos" class="seccion">
+    <h1 style="text-align:center;">
+        🌸 Lo que me recuerda a vos 🌸
+    </h1>
+
+    <div class="slider" id="sliderRecuerdos">
+
+        <button class="prev">&#10094;</button>
+
+        <div class="slides">
+
+            <img src="Nueva carpeta/★.jpg" alt="">
+            <img src="Nueva carpeta/8514686790903839.jpg" alt="">
+            <img src="Nueva carpeta/11962755256956861.jpg" alt="">
+            <img src="Nueva carpeta/14496030046030333.jpg" alt="">
+            <img src="Nueva carpeta/50595195807640799.jpg" alt="">
+            <img src="Nueva carpeta/Because Nutella is pure magic made in the land of….jpg" alt="">
+            <img src="Nueva carpeta/BTS [ARIRANG] Weverse Japan – Photocard OT7.jpg" alt="">
+            <img src="Nueva carpeta/Chocolate Nestlé Alpino ao Leite com 80g.jpg" alt="">
+            <img src="Nueva carpeta/Chocolate Nestlé Alpino ao Leite com 80g.jpg" alt="">
+            <img src="Nueva carpeta/coffee.jpg" alt="">
+            <img src="Nueva carpeta/gato.jpg" alt="">
+            <img src="Nueva carpeta/K-dramas.jpg" alt="">
+            <img src="Nueva carpeta/Medialunas🤤.jpg" alt="">
+            <img src="Nueva carpeta/metrika.jpg" alt="">
+            <img src="Nueva carpeta/𝑴𝒊𝒌𝒖 𝒊𝒄𝒐𝒏𝒔.jpg" alt="">
+            <img src="Nueva carpeta/never ending music _3.jpg" alt="">
+            <img src="Nueva carpeta/Vinta brown leatherette shoulder bag💋 Sold before….jpg" alt="">
+            <img src="Nueva carpeta/rojuu.jpg" alt="">
+        </div>
+
+        <button class="next">&#10095;</button>
+
+    </div>
+
+    <div class="dots"></div>
+
+    <div class="carta">
+
+        <p>
+
+            Hay muchísimas cosas que hacen que automáticamente piense en vos.
+
+            A veces ni siquiera me doy cuenta.
+
+            Simplemente veo algo y mi cabeza dice:
+
+            "Esto seguro le gustaría a Gabi."
+
+        </p>
+
+        <p>
+
+            Puede ser una prenda de ropa.
+
+            Un dulce.
+
+            Un peluche.
+
+            Una canción.
+
+            Una serie.
+
+            Una cafetería.
+
+            O cualquier cosa que tenga un pequeño detalle que me recuerde a vos.
+
+        </p>
+
+        <p>
+
+            El olor al café siempre me hace pensar en vos.
+
+            Ya forma parte de tu esencia para mí.
+
+            Es sentir ese aroma y automáticamente acordarme de vos.
+
+        </p>
+
+        <p>
+
+            También hay flores.
+
+            Sí...
+
+            Además del lirio (porque sos mi delirio 😳).
+
+            Siempre pienso en el jazmín.
+
+            ¿Por qué?
+
+            Porque lleva tu nombre.
+
+            Y desde que lo descubrí ya nunca pude dejar de asociarlo con vos.
+
+        </p>
+
+        <p>
+
+            Puede parecer una tontería.
+
+            Pero me encanta encontrar cosas que me recuerden a vos.
+
+            Porque significa que, incluso cuando no estás conmigo, seguís apareciendo en mis pensamientos.
+
+        </p>
+
+        <p>
+
+            Tal vez las imágenes hablan mucho mejor que las palabras.
+
+            Cada una de ellas representa algo que, de una forma u otra, me termina haciendo pensar en vos.
+
+        </p>
+
+        <p>
+
+            Y acá abajo te dejo algunas canciones muy especiales para nosotros.
+
+        </p>
+
+    </div>
+
+    <div class="cancion"
+    onclick="window.open('https://www.letras.com/coldplay/8090/significado.html','_blank')">
+
+        🎵 SPARKS
+
+    </div>
+
+    <div class="cancion"
+    onclick="window.open('https://youtu.be/DJ8z7V8iGaE?si=-x0DXuxjqsfqNYEC','_blank')">
+
+        🎵 CAN'T HELP FALLING IN LOVE
+
+    </div>
+
+    <div class="cancion"
+    onclick="window.open('https://youtu.be/7wMiMDBHnJ0?si=1T_XTDaHKX4OwhUB','_blank')">
+
+        🎵 ACROSS THE STARS
+
+    </div>
+
+    <button
+    class="volver"
+    onclick="mostrar('inicio')">
+
+        🏠 Volver al inicio
+
+    </button>
+
+</section>
+</div>
+
+
+
+
+
+<section id="video" class="seccion">
+
+    <h1 style="text-align:center;">
+        🎥 Gachas mi Gabicita hermosa ❤️
+    </h1>
+
+    <div class="carta" style="text-align:center;">
+
+        <p>
+
+            Gracias por todos los momentos que hemos vivido juntos.
+
+            Gracias por cada risa.
+
+            Por cada salida.
+
+            Por cada abrazo.
+
+            Por cada beso.
+
+            Y gracias por hacer que cada recuerdo con vos sea uno de mis lugares favoritos.
+
+        </p>
+
+        <p>
+
+            Espero que este video te recuerde lo feliz que soy cuando estoy con vos.
+
+        </p>
+
+    </div>
+
+    <video
+
+        class="video"
+
+        controls
+
+        preload="metadata"
+
+        playsinline
+
+        poster="Nueva carpeta/IMG-20260408-WA0077.jpg">
+        
+        <source
+        src="Nueva carpeta/lv_0_20260707233916.mp4"
+        type="video/mp4">
+
+        Tu navegador no soporta videos.
+
+    </video>
+
+    <br><br>
+
+    <button
+    class="volver"
+    onclick="mostrar('inicio')">
+
+        🏠 Volver al inicio
+
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- FIN DEL CONTENIDO -->
+<!-- ========================= -->
+
+<!-- Canvas para partículas -->
+<canvas id="particles"></canvas>
+
+<!-- Lightbox -->
+
+<div
+id="lightbox"
+class="lightbox">
+
+    <img
+    id="lightboxImg"
+    src="">
+
+</div>
+
+
+
+<script>
+/*==================================================
+    NAVEGACIÓN ENTRE SECCIONES
+==================================================*/
+
+const secciones = document.querySelectorAll(".seccion");
+
+function mostrar(id){
+
+    document.querySelectorAll(".seccion").forEach(sec=>{
+        sec.style.display="none";
+    });
+
+    document.getElementById(id).style.display="block";
+
+}
+
+
+
+/*==================================================
+    CARRUSELES
+==================================================*/
+
+document.querySelectorAll(".slider").forEach(inicializarSlider);
+
+function inicializarSlider(slider){
+
+    const slides = slider.querySelector(".slides");
+
+    const imagenes = slides.querySelectorAll("img");
+
+    const prev = slider.querySelector(".prev");
+
+    const next = slider.querySelector(".next");
+
+    const dotsContainer =
+        slider.parentElement.querySelector(".dots");
+
+    let indice = 0;
+
+    /*==========================================*/
+
+    function crearDots(){
+
+        dotsContainer.innerHTML="";
+
+        imagenes.forEach((_,i)=>{
+
+            const dot =
+                document.createElement("span");
+
+            dot.className="dot";
+
+            if(i===0)
+                dot.classList.add("active");
+
+            dot.onclick=()=>{
+
+                indice=i;
+
+                actualizar();
+
+            };
+
+            dotsContainer.appendChild(dot);
+
+        });
+
+    }
+
+    /*==========================================*/
+
+    function actualizar(){
+
+        slides.style.transform=
+            `translateX(-${indice*100}%)`;
+
+        dotsContainer
+            .querySelectorAll(".dot")
+            .forEach((dot,i)=>{
+
+                dot.classList.toggle(
+                    "active",
+                    i===indice
+                );
+
+            });
+
+    }
+
+    /*==========================================*/
+
+    next.onclick=()=>{
+
+        indice++;
+
+        if(indice>=imagenes.length){
+
+            indice=0;
+
+        }
+
+        actualizar();
+
+    };
+
+    prev.onclick=()=>{
+
+        indice--;
+
+        if(indice<0){
+
+            indice=imagenes.length-1;
+
+        }
+
+        actualizar();
+
+    };
+
+    /*==========================================*/
+
+    crearDots();
+
+    actualizar();
+
+    /*==========================================
+        AUTO PLAY
+    ==========================================*/
+
+    let intervalo=
+        setInterval(siguiente,5000);
+
+    function siguiente(){
+
+        indice++;
+
+        if(indice>=imagenes.length){
+
+            indice=0;
+
+        }
+
+        actualizar();
+
+    }
+
+    slider.addEventListener("mouseenter",()=>{
+
+        clearInterval(intervalo);
+
+    });
+
+    slider.addEventListener("mouseleave",()=>{
+
+        intervalo=
+        setInterval(siguiente,5000);
+
+    });
+
+    /*==========================================
+        GUARDAMOS PARA EL SWIPE
+    ==========================================*/
+
+    slider.dataset.indice=indice;
+
+    slider.actualizar=actualizar;
+
+    slider.setIndice=(valor)=>{
+
+        indice=valor;
+
+        actualizar();
+
+    };
+
+    slider.getIndice=()=>indice;
+
+    slider.total=imagenes.length;
+
+}
+/*==================================================
+    SWIPE (CELULAR + MOUSE)
+==================================================*/
+
+document.querySelectorAll(".slider").forEach(slider=>{
+
+    let startX=0;
+    let endX=0;
+    let presionado=false;
+
+    /*--------------- TOUCH ----------------*/
+
+    slider.addEventListener("touchstart",e=>{
+
+        startX=e.touches[0].clientX;
+
+    });
+
+    slider.addEventListener("touchmove",e=>{
+
+        endX=e.touches[0].clientX;
+
+    });
+
+    slider.addEventListener("touchend",()=>{
+
+        cambiar();
+
+    });
+
+    /*--------------- MOUSE ----------------*/
+
+    slider.addEventListener("mousedown",e=>{
+
+        presionado=true;
+
+        startX=e.clientX;
+
+    });
+
+    slider.addEventListener("mousemove",e=>{
+
+        if(!presionado) return;
+
+        endX=e.clientX;
+
+    });
+
+    window.addEventListener("mouseup",()=>{
+
+        if(!presionado) return;
+
+        presionado=false;
+
+        cambiar();
+
+    });
+
+    /*--------------- CAMBIO ----------------*/
+
+    function cambiar(){
+
+        let diferencia=startX-endX;
+
+        if(Math.abs(diferencia)<50){
+
+            startX=0;
+            endX=0;
+            return;
+
+        }
+
+        let indice=slider.getIndice();
+
+        if(diferencia>0){
+
+            indice++;
+
+        }else{
+
+            indice--;
+
+        }
+
+        if(indice<0){
+
+            indice=slider.total-1;
+
+        }
+
+        if(indice>=slider.total){
+
+            indice=0;
+
+        }
+
+        slider.setIndice(indice);
+
+        startX=0;
+        endX=0;
+
+    }
+
+});
+
+
+/*==================================================
+    LIGHTBOX
+==================================================*/
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightboxImg");
+
+document.querySelectorAll(".slides img").forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        lightbox.classList.add("activo");
+
+        lightboxImg.src=img.src;
+
+    });
+
+});
+
+/*----------------------------------------------*/
+
+lightbox.addEventListener("click",e=>{
+
+    if(e.target===lightbox){
+
+        lightbox.classList.remove("activo");
+
+    }
+
+});
+
+/*----------------------------------------------*/
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key==="Escape"){
+
+        lightbox.classList.remove("activo");
+
+    }
+
+});
+
+/*----------------------------------------------*/
+
+lightboxImg.addEventListener("click",e=>{
+
+    e.stopPropagation();
+
+});
+/*==================================================
+    CORAZONES FLOTANTES
+==================================================*/
+
+function crearCorazon(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    heart.innerHTML="❤";
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.fontSize=(15+Math.random()*25)+"px";
+
+    heart.style.animationDuration=(6+Math.random()*6)+"s";
+
+    heart.style.opacity=Math.random();
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },12000);
+
+}
+
+setInterval(crearCorazon,450);
+
+/*==================================================
+    PARTICULAS
+==================================================*/
+
+const canvas=document.getElementById("particles");
+
+const ctx=canvas.getContext("2d");
+
+let particulas=[];
+
+function resizeCanvas(){
+
+    canvas.width=window.innerWidth;
+
+    canvas.height=window.innerHeight;
+
+}
+
+resizeCanvas();
+
+window.addEventListener("resize",resizeCanvas);
+
+for(let i=0;i<90;i++){
+
+    particulas.push({
+
+        x:Math.random()*canvas.width,
+
+        y:Math.random()*canvas.height,
+
+        r:Math.random()*2+1,
+
+        dx:(Math.random()-0.5)*0.4,
+
+        dy:(Math.random()-0.5)*0.4
+
+    });
+
+}
+
+function animarParticulas(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particulas.forEach(p=>{
+
+        p.x+=p.dx;
+
+        p.y+=p.dy;
+
+        if(p.x<0)p.x=canvas.width;
+
+        if(p.x>canvas.width)p.x=0;
+
+        if(p.y<0)p.y=canvas.height;
+
+        if(p.y>canvas.height)p.y=0;
+
+        ctx.beginPath();
+
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+        ctx.fillStyle="rgba(255,255,255,.35)";
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(animarParticulas);
+
+}
+
+animarParticulas();
+
+/*==================================================
+    EFECTO DE APARICIÓN
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    document.body.style.opacity="1";
+
+});
+
+/*==================================================
+    PREVENIR ARRASTRE DE IMÁGENES
+==================================================*/
+
+document.querySelectorAll("img").forEach(img=>{
+
+    img.draggable=false;
+
+});
+console.log(secciones);
+
+/*==================================================
+    FIN
+==================================================*/
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Gabi ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+:root{
+
+    --violeta1:#2d1b3d;
+    --violeta2:#41264f;
+    --violeta3:#6c4f83;
+
+    --glass:rgba(255,255,255,.12);
+    --glass-border:rgba(255,255,255,.18);
+
+    --texto:#ffffff;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Segoe UI',sans-serif;
+
+    color:var(--texto);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        var(--violeta1),
+        var(--violeta2),
+        var(--violeta3)
+    );
+
+    background-size:400% 400%;
+
+    animation:fondo 15s ease infinite;
+
+    position:relative;
+
+}
+
+/* ========================= */
+/* FONDO ANIMADO */
+/* ========================= */
+
+@keyframes fondo{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ========================= */
+/* PARTICULAS */
+/* ========================= */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ========================= */
+/* CORAZONES */
+/* ========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:20px;
+
+    animation:floatHeart linear forwards;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+.seccion{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+    position:relative;
+
+    z-index:2;
+
+    animation:fade .7s ease;
+
+}
+
+.seccion.activa{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================= */
+/* INICIO */
+/* ========================= */
+
+#inicio{
+
+    display:block;
+
+    background:
+    url("IMG-20260408-WA0077.jpg")
+    center center/cover;
+
+}
+
+#inicio::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(3px);
+
+}
+
+.contenido-inicio{
+
+    position:relative;
+
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:3.5rem;
+
+    text-shadow:0 0 25px rgba(255,255,255,.25);
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    margin-bottom:20px;
+
+}
+
+/* ========================= */
+/* AUDIO */
+/* ========================= */
+
+audio{
+
+    width:min(350px,95%);
+
+    margin-top:20px;
+
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+
+.contenedor{
+
+    margin-top:60px;
+
+    display:flex;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.bloque{
+
+    width:250px;
+
+    height:170px;
+
+    border-radius:30px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.bloque:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    background:
+    rgba(255,255,255,.2);
+
+}
+
+/* ========================= */
+/* CARTAS */
+/* ========================= */
+
+.carta{
+
+    width:min(1000px,95%);
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    line-height:2;
+
+    font-size:18px;
+
+    text-align:justify;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+
+}
+
+.carta p{
+
+    margin-bottom:22px;
+
+}
+
+/* ========================= */
+/* BOTON VOLVER */
+/* ========================= */
+
+.volver{
+
+    display:block;
+
+    margin:40px auto;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#5a3473;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.volver:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ========================= */
+/* SLIDER */
+/* ========================= */
+
+.slider{
+
+    position:relative;
+
+    width:min(950px,95%);
+
+    margin:40px auto;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.4);
+
+}
+
+.slides{
+
+    display:flex;
+
+    transition:transform .5s ease;
+
+}
+
+.slides img{
+
+    width:100%;
+
+    flex-shrink:0;
+
+    height:550px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.5);
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+.prev{
+
+    left:15px;
+
+}
+
+.next{
+
+    right:15px;
+
+}
+
+.dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.4);
+
+    cursor:pointer;
+
+}
+
+.dot.active{
+
+    background:white;
+
+}
+
+/* ========================= */
+/* LIGHTBOX */
+/* ========================= */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox img{
+
+    max-width:95%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+}
+
+.lightbox.activo{
+
+    display:flex;
+
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+.video{
+
+    width:min(1000px,95%);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+/* ========================= */
+/* CANCIONES */
+/* ========================= */
+
+.cancion{
+
+    width:min(450px,90%);
+
+    margin:20px auto;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cancion:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .seccion{
+
+        padding:20px 15px;
+
+    }
+
+    .contenedor{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .bloque{
+
+        width:100%;
+        max-width:340px;
+
+        height:100px;
+
+        font-size:40px;
+
+    }
+
+    .slides img{
+
+        height:380px;
+
+    }
+
+    .carta{
+
+        padding:22px;
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .volver{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- PARTICULAS -->
+<!-- ========================= -->
+
+<canvas id="particles"></canvas>
+
+<!-- ========================= -->
+<!-- LIGHTBOX -->
+<!-- ========================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <img id="lightboxImg" src="" alt="Imagen">
+
+</div>
+
+<!-- ========================= -->
+<!-- INICIO -->
+<!-- ========================= -->
+
+<section id="inicio" class="seccion activa">
+
+    <div class="contenido-inicio">
+
+        <h1>❤️ Para Gabi ❤️</h1>
+
+        <p style="
+            max-width:700px;
+            line-height:1.8;
+            margin-bottom:25px;
+            font-size:18px;
+        ">
+
+            Un pequeño lugar donde guardé un pedacito
+            de todo lo que siento por vos.
+
+        </p>
+
+        <audio
+            id="musica"
+            controls
+            autoplay
+            loop>
+
+            <source
+            src="Coldplay - Sparks (1 Hour Loop).mp3"
+            type="audio/mpeg">
+
+        </audio>
+
+        <div class="contenedor">
+
+            <div
+            class="bloque"
+            onclick="mostrar('ella')">
+
+                ❤️
+
+            </div>
+
+            <div
+            class="bloque"
+            onclick="mostrar('recuerdos')">
+
+                🌸
+
+            </div>
+
+            <div
+            class="bloque"
+            onclick="mostrar('video')">
+
+                🎥
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================= -->
+<!-- SECCION ELLA -->
+<!-- ================================= -->
+
+<section
+id="ella"
+class="seccion">
+
+<h1
+style="
+text-align:center;
+margin-bottom:20px;
+">
+
+❤️
+
+</h1>
+
+<!-- ========================= -->
+<!-- CARRUSEL -->
+<!-- ========================= -->
+
+<div
+class="slider"
+id="sliderElla">
+
+<button
+class="prev">
+
+&#10094;
+
+</button>
+
+<div class="slides">
+
+<img
+src="WhatsApp Image 2026-06-16 at 23.48.46 (1).jpeg"
+alt="">
+
+<img
+src="WhatsApp Image 2026-06-16 at 23.48.46.jpeg"
+alt="">
+
+</div>
+
+<button
+class="next">
+
+&#10095;
+
+</button>
+
+</div>
+
+<div class="dots"></div>
+
+<!-- ========================= -->
+<!-- CARTA -->
+<!-- ========================= -->
+
+<div class="carta">
