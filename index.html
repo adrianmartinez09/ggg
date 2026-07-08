@@ -1173,7 +1173,7 @@ Te amo con todo mi corazón.
             <img src="./carpeta/14496030046030333.jpg" alt="">
             <img src="./carpeta/11962755256956861.jpg" alt="">
             <img src="./carpeta/50595195807640799.jpg" alt="">
-            <img src="carpeta/g.jpg" alt="">
+            <img src="https://adrianmartinez09.github.io/ggg/carpeta/gato.jpg" alt="">
             <img src="./carpeta/a.jpg" alt="">
             <img src="./carpeta/coffee.jpg" alt="">
             <img src="./carpeta/gato.jpg" alt="">
@@ -1397,7 +1397,17 @@ function mostrar(id){
         sec.style.display="none";
     });
 
-    document.getElementById(id).style.display="block";
+    const seccion = document.getElementById(id);
+
+    seccion.style.display="block";
+
+
+    // Actualizar carrusel cuando aparece
+    const slider = seccion.querySelector(".slider");
+
+    if(slider && slider.actualizar){
+        slider.actualizar();
+    }
 
 }
 
